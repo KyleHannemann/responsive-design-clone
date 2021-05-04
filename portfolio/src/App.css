@@ -1,0 +1,340 @@
+body{
+  font-family: 'Times New Roman', Times, serif;
+}
+*{
+  box-sizing: border-box;
+}
+
+#topNavBar{
+  background-color: #f0eeed;
+  z-index: 5;
+  opacity: .8;
+  box-sizing: border-box;
+  padding: 8px;
+  width: 100%;
+  min-height: 50px;
+  position:fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  
+}
+#topNavBar > .activePage{
+  color: #556276;
+  border-bottom: solid 1px #556276;
+  transition: 1s;
+  
+  
+}
+#skillsContainer{
+  background: rgb(241,241,239);
+background: linear-gradient(193deg, rgba(241,241,239,1) 0%, rgba(85,98,118,1) 46%, rgba(24,46,73,1) 69%);
+  width: 100vw;
+  height: 100vh;
+}
+#aboutMeContainer{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 50px;
+  align-items: center;
+  background: rgb(241,241,239);
+  background: linear-gradient(0deg, rgba(241,241,239,1) 0%, rgba(85,98,118,1) 46%, rgba(24,46,73,1) 69%);
+}
+
+#homeScreenContainer{
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./pexels-trace-hudson-2365457.jpg');
+  background-size: cover;
+  background-position-y: 40%;
+  background-position-x: 50% ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+
+#topNavBar > a{
+  color: #182e49;
+  opacity: 1;
+  margin-right: 55px;
+  font-size: 18px;
+  display: block;
+  text-decoration: none;
+}
+#topNavBar > a:hover{
+  color: #556276;
+  cursor:pointer;
+}
+#topNavBarIcon{
+
+  display: none;
+}
+#skillsContainer{
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#skillsContainer > h1{
+  text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 800;
+  -webkit-text-fill-color: #f0eeed; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: .1px;
+  -webkit-text-stroke-color: #182e49;
+
+}
+#skillsFlexBox > div{
+  text-align: center;
+  opacity: .8;
+  background-color: #f0eeed;
+  height: 60px;
+  width: 200px;
+  margin-left:2px;
+  overflow: hidden;
+  border-radius: 4px;
+  
+  
+}
+#skillsFlexBox > div > div, #skillsFlexBox > div > h2{
+  padding: 5px;
+  color:#182e49
+  
+}
+#skillsFlexBox > div > div:last-child{
+  margin-bottom: 10px;
+  
+}
+#skillsFlexBox > div:hover{
+  height: fit-content;
+
+}
+#skillsFlexBox{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+#aboutMeContainer > section{
+  width: 30%;
+  color: #f0eeed
+}
+#slideShowContainer{
+  width: 400px;
+  height: 400px;
+  
+}
+#forwardButtonSlides{
+  
+  float: right;
+}
+#slideShowControls{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#slideShowControls > span{
+  width: 140px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+#slideShowControls > span > span{
+  height: 20px;
+  width: 20px;
+  
+  border-radius: 50%;
+  border: 1px solid #f0eeed;
+}
+#slideShowControls > span > span.active{
+  background-color: #f0eeed ;
+}
+
+#slideShowControls > button{
+  font-size: 40px;
+  color: #f0eeed;
+  background-color: inherit;
+  border: none;
+}
+#slideShowControls > button:hover{
+  color: #929291;
+  cursor: pointer;
+}
+@keyframes fade{
+  0%{
+    opacity: .4;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
+#slideShowContainer  > div{
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 5px rgb(170, 169, 169);
+  display: none;
+  animation: fade 2s;
+ 
+}
+#slideShowContainer > div.active{
+  display: block;
+}
+#slide1{background-image: url('./slideshow/fam.jpg');  background-size: cover;}
+#slide2{background-image: url('./slideshow/rj.jpg');  background-size: 150%; transform:rotate(270deg); background-position-x: 50%; background-position-y: 50%;}
+#slide3{background-image: url('./slideshow/kyleTash.jpg');  background-size: cover;}
+#slide4{background-image: url('./slideshow/kyleFootball.png');  background-size: 130%; background-position-y: 40%;}
+#slide5{background-image: url('./slideshow/kyleFootballTrophy.png');  background-size: cover; background-position-y: 50%;}
+@media screen and (max-width: 800px){
+  #aboutMeContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+  } 
+  #aboutMeContainer > section{
+    width: 80%;
+  } 
+  #topNavBar{
+    background-color: whitesmoke;
+    z-index: 5;
+    opacity: .8;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  #skillsFlexBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height:100%;
+  }
+ 
+
+  #topNavBar > a{
+    display: none;
+  }
+  
+  #topNavBarIcon{
+      color: #182e49;
+      position: absolute;
+      z-index: 3;
+      font-size: 18px;
+      top: 10px;
+      right: 50px;
+    display: block;
+    
+    
+   }
+   #topNavBarIcon:hover{
+     cursor: pointer;
+     color: #556276
+   }
+  #topNavBar.active > a{
+    display: block;
+    color: #182e49;
+    margin-bottom: 1.5px;
+    margin-top: 1.5px;
+
+   
+  }
+  #topNavBar.active > .activePage{
+    color: #556276;
+  border-bottom: solid 1px #556276;
+  transition: 1s;
+  }
+  #topNavBar.active > a:hover{
+    color: #556276;
+  cursor:pointer;
+
+   
+  }
+}
+
+
+
+
+
+@keyframes mist {
+  0%{
+    transform: rotate(0deg)translateY(200px);
+    opacity: 0;
+    filter: blur(20px);
+  }
+  
+  30% {
+    transform: rotate(0deg) translateY(0px);
+    opacity: .7;
+    filter:blur(0px)
+  }
+  40%{
+    transform: rotate(0deg) translateY(0px);
+    opacity: .7;
+    filter:blur(0px)
+  }
+  50%{
+    transform: rotate(0deg) translateY(0px);
+    opacity: .7;
+    filter:blur(0px)
+  }
+  
+  100% {
+    transform: rotate(0deg) translateY(-300px);
+    opacity: 0;
+    filter: blur(20px);
+  }
+}
+#welcomeText{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
+  font-size: 3.5vw;
+  font-weight: 800;
+  -webkit-text-fill-color: #f0eeed; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: .1vw;
+  -webkit-text-stroke-color: #182e49;
+  animation: mist 4.5s infinite;
+  display:flex;
+  flex-direction: column;
+}
+#homepageArrow{
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #f0eeed; 
+  animation:bounce 2s infinite;
+}
+#homePageArrow:hover{
+  cursor: pointer;
+}
+@keyframes bounce{
+  0% {
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(5px);
+  
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+
